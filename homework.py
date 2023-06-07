@@ -26,7 +26,7 @@ def generate_hint(answer, guess):
 def play_game():
     answer = generate_answer()
     attempts = 0
-    max_attempts = 10
+    max_attempts = 8
 
     print("=== 数字当てゲーム ===")
     print("3桁の数字を当ててください。")
