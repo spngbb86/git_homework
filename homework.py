@@ -17,11 +17,9 @@ def generate_hint(answer, guess):
     hint = []
     for i in range(len(answer)):
         if answer[i] == guess[i]:
-            hint.append('O')
-        elif answer[i] in guess:
-            hint.append('△')
+            hint.append(answer[i])
         else:
-            hint.append('X')
+            hint.append('*')
     return ' '.join(hint)
 
 # ゲームの実行
@@ -32,7 +30,7 @@ def play_game():
 
     print("=== 数字当てゲーム ===")
     print("3桁の数字を当ててください。")
-    print("ヒント: Oは正しい数字と位置、△は正しい数字のみ、Xは不正解")
+    print("ヒント: *は数字のみ正解")
     print("====================")
 
     while attempts < max_attempts:
@@ -54,5 +52,4 @@ def play_game():
 
     if attempts == max_attempts:
         print("解答回数の制限に達しました。正解は", answer, "でした。")
-
 play_game()
