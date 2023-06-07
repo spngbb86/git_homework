@@ -30,7 +30,7 @@ def play_game():
 
     print("=== 数字当てゲーム ===")
     print("3桁の数字を当ててください。")
-    print("ヒント: *は数字のみ正解")
+    print("ヒント: 正解の数字のみ表示してそれ以外の桁には*を表示します")
     print("====================")
 
     while attempts < max_attempts:
